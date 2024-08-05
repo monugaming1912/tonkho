@@ -104,48 +104,20 @@
         <a href="https://monugaming1912.github.io/ymed/">Xem Viettel</a>
     </div>
     <div class="iframe-container">
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1Vxkm3I9ls3Uu8g_R6I2fqGZxP1Za5C9fJXE1fdNHZunmIsS-BPbn6XtQqDFEoUj9hzsJ4DhsZ7yk/pubhtml?gid=1273789&single=true"></iframe>
+        <iframe src="https://docs.google.com/spreadsheets/d/1kUuCmpabio2LuIA1RNx-tLh5699o9g13lQv-jdFf6zU/edit?usp=sharing&gid=1273789&rm=minimal&single=true&widget=false&headers=false&chrome=false&range=A1&gridlines=false&widget=false&header=false"></iframe>
     </div>
 
     <script>
-        function setCookie(name, value, minutes) {
-            const date = new Date();
-            date.setTime(date.getTime() + (minutes * 60 * 1000));
-            const expires = "expires=" + date.toUTCString();
-            document.cookie = name + "=" + value + ";" + expires + ";path=/";
-        }
-
-        function getCookie(name) {
-            const nameEQ = name + "=";
-            const ca = document.cookie.split(';');
-            for (let i = 0; i < ca.length; i++) {
-                let c = ca[i];
-                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
-        }
-
         function checkPassword() {
             const input = document.getElementById('passwordInput').value;
             const overlay = document.getElementById('passwordOverlay');
             const correctPassword = 'tonkho123';
             if (input === correctPassword) {
-                setCookie('accessGranted', 'true', 30); // Lưu cookie trong 30 phút
                 overlay.style.display = 'none';
             } else {
                 alert('Sai mật khẩu. Vui lòng thử lại.');
             }
         }
-
-        function checkAccess() {
-            const accessGranted = getCookie('accessGranted');
-            if (accessGranted === 'true') {
-                document.getElementById('passwordOverlay').style.display = 'none';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', checkAccess);
     </script>
 </body>
 </html>
